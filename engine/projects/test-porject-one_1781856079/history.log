@@ -1,0 +1,266 @@
+[2026-06-19 13:31:19] Project Created: 'Test Porject One' with aspect ratio 9:16
+[2026-06-19 13:35:02] Action: Import file - Name: 'render_b563cb50-ca38-48c2-a4f8-65c7cdc9a171.mp4', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\ff1e323d-7ace-45ff-9340-48b0a1a8cde0.mp4'
+[2026-06-19 13:35:02] Action: Add clip: render_b563cb50-ca38-48c2-a4f8-65c7cdc9a171.mp4
+[2026-06-19 13:35:10] Action: Move/Trim clip
+[2026-06-19 13:40:48] Action: Move/Trim clip
+[2026-06-19 13:41:43] Action: Import file - Name: 'Desi_Heart.mp4', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\ec45fdfa-a3eb-4295-b50b-4f2dccbcc690.mp4'
+[2026-06-19 13:41:44] Action: Add clip: Desi_Heart.mp4
+[2026-06-19 13:41:46] Action: Move/Trim clip
+[2026-06-19 13:41:50] Action: Move/Trim clip
+[2026-06-19 13:41:57] Action: Move/Trim clip
+[2026-06-19 13:41:59] Action: Move/Trim clip
+[2026-06-19 13:42:02] Action: Move/Trim clip
+[2026-06-19 13:42:04] Action: Move/Trim clip
+[2026-06-19 13:42:05] Action: Move/Trim clip
+[2026-06-19 13:42:06] Action: Move/Trim clip
+[2026-06-19 13:42:10] Action: Move/Trim clip
+[2026-06-19 13:42:15] Action: Move/Trim clip
+[2026-06-19 13:42:56] Action: Import file - Name: '10544cd7-a337-4ecf-83ac-51671f17f832-Photoroom.png', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\382948f9-abed-4ee9-950b-5c18b0cfd05f.png'
+[2026-06-19 13:42:56] Action: Import file - Name: '10544cd7-a337-4ecf-83ac-51671f17f832.jpg', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\45685a4d-7bbb-4acd-8145-aaee1038c45c.jpg'
+[2026-06-19 13:42:57] Action: Import file - Name: '2023-04-13_14-48-55_FP-Calculator-A5-CarbonlessTriplicate-Colour.png', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\ad316bd5-63f8-4d92-9f37-c3022cab8a5b.png'
+[2026-06-19 13:42:59] Action: Add clip: 10544cd7-a337-4ecf-83ac-51671f17f832.jpg
+[2026-06-19 13:43:03] Action: Move/Trim clip
+[2026-06-19 13:43:05] Action: Add clip: 10544cd7-a337-4ecf-83ac-51671f17f832.jpg
+[2026-06-19 13:43:08] Action: Move/Trim clip
+[2026-06-19 13:43:11] Action: Move/Trim clip
+[2026-06-19 13:43:17] Action: Move/Trim clip
+[2026-06-19 13:43:19] Action: Move/Trim clip
+[2026-06-19 13:43:19] Action: Delete clip
+[2026-06-19 13:43:20] Action: Move/Trim clip
+[2026-06-19 13:43:20] Action: Delete clip
+[2026-06-19 13:43:26] Action: Move/Trim clip
+[2026-06-19 13:43:34] Action: Start Render - Render ID: 15853709-c01f-4022-b7d1-b78274eb5be6
+[2026-06-19 13:43:42] Action: Render Complete - Output: 'render_9f0b4858-7a7f-446a-a9c6-94a0eca4b47d.mp4'
+[2026-06-19 14:12:40] Action: Move/Trim clip
+[2026-06-19 14:12:41] Action: Move/Trim clip
+[2026-06-19 14:12:49] Action: Toggle clip grayscale
+[2026-06-19 14:12:49] Action: Toggle clip grayscale
+[2026-06-19 14:12:50] Action: Toggle clip sepia
+[2026-06-19 14:12:51] Action: Toggle clip sepia
+[2026-06-19 14:12:52] Action: Toggle clip grayscale
+[2026-06-19 14:12:52] Action: Toggle clip grayscale
+[2026-06-19 14:12:53] Action: Toggle clip sepia
+[2026-06-19 14:12:54] Action: Toggle clip sepia
+[2026-06-19 14:13:43] Action: Transform clip
+[2026-06-19 14:13:53] Action: Transform clip
+[2026-06-19 14:13:56] Action: Transform clip
+[2026-06-19 14:13:57] Action: Transform clip
+[2026-06-19 14:13:59] Action: Transform clip
+[2026-06-19 14:14:05] Action: Transform clip
+[2026-06-19 14:14:07] Action: Transform clip
+[2026-06-19 14:14:09] Action: Transform clip
+[2026-06-19 14:14:10] Action: Transform clip
+[2026-06-19 14:14:13] Action: Transform clip
+[2026-06-19 14:14:14] Action: Transform clip
+[2026-06-19 14:14:47] Action: Transform clip
+[2026-06-19 14:14:52] Action: Transform clip
+[2026-06-19 14:14:59] Action: Transform clip
+[2026-06-19 14:15:01] Action: Transform clip
+[2026-06-19 14:15:05] Action: Transform clip
+[2026-06-19 14:15:07] Action: Transform clip
+[2026-06-19 14:15:08] Action: Transform clip
+[2026-06-19 14:15:14] Action: Transform clip
+[2026-06-19 14:18:14] Action: Adjust clip to natural aspect ratio
+[2026-06-19 14:20:43] Action: Transform clip
+[2026-06-19 14:20:45] Action: Transform clip
+[2026-06-19 14:24:48] Action: Adjust clip to natural aspect ratio
+[2026-06-19 14:24:55] Action: Change clip X position
+[2026-06-19 14:24:56] Action: Change clip X position
+[2026-06-19 14:24:56] Action: Change clip X position
+[2026-06-19 14:24:56] Action: Change clip X position
+[2026-06-19 14:24:56] Action: Change clip X position
+[2026-06-19 14:24:56] Action: Change clip X position
+[2026-06-19 14:24:59] Action: Transform clip
+[2026-06-19 14:25:08] Action: Transform clip
+[2026-06-19 14:25:16] Action: Transform clip
+[2026-06-19 14:25:17] Action: Transform clip
+[2026-06-19 14:25:22] Action: Transform clip
+[2026-06-19 14:25:22] Action: Transform clip
+[2026-06-19 14:25:24] Action: Transform clip
+[2026-06-19 14:25:24] Action: Transform clip
+[2026-06-19 14:25:27] Action: Transform clip
+[2026-06-19 14:25:49] Action: Move/Trim clip
+[2026-06-19 14:25:49] Action: Move/Trim clip
+[2026-06-19 14:25:53] Action: Change clip X position
+[2026-06-19 14:25:53] Action: Change clip X position
+[2026-06-19 14:25:53] Action: Change clip X position
+[2026-06-19 14:25:54] Action: Change clip X position
+[2026-06-19 14:25:55] Action: Transform clip
+[2026-06-19 14:25:59] Action: Transform clip
+[2026-06-19 14:26:02] Action: Transform clip
+[2026-06-19 14:26:07] Action: Transform clip
+[2026-06-19 14:26:11] Action: Transform clip
+[2026-06-19 14:26:13] Action: Transform clip
+[2026-06-19 14:26:42] Action: Start Render - Render ID: 12d5aea7-5891-4561-b001-f0aca1045ea5
+[2026-06-19 14:26:51] Action: Render Complete - Output: 'render_342e33ee-bf4f-4cbe-9d98-f50a50b8527d.mp4'
+[2026-06-19 14:29:51] Action: Start Render - Render ID: f4addc49-a96e-4cdd-bb18-908ea71b37a9
+[2026-06-19 14:30:01] Action: Render Complete - Output: 'render_5513126b-e78d-432d-ba9e-a617221b7d25.mp4'
+[2026-06-19 14:35:37] Action: Start Render - Render ID: 7c7c09d7-2c97-4122-8b0a-812281bf9a63
+[2026-06-19 14:35:45] Action: Render Complete - Output: 'render_961d38a1-7539-43de-80e1-89b9254b4f5c.mp4'
+[2026-06-19 14:37:00] Action: Move/Trim clip
+[2026-06-19 14:37:05] Action: Change clip X position
+[2026-06-19 14:37:07] Action: Start Render - Render ID: 172aed2e-6501-4230-a3f1-d39ad3338dd0
+[2026-06-19 14:37:16] Action: Render Complete - Output: 'render_524e2327-d68a-4b3d-9119-b1edc7738a16.mp4'
+[2026-06-19 14:39:17] Action: Transform clip
+[2026-06-19 14:39:20] Action: Transform clip
+[2026-06-19 14:39:22] Action: Transform clip
+[2026-06-19 14:39:24] Action: Transform clip
+[2026-06-19 14:39:26] Action: Transform clip
+[2026-06-19 14:40:12] Action: Transform clip
+[2026-06-19 14:40:20] Action: Transform clip
+[2026-06-19 14:40:25] Action: Transform clip
+[2026-06-19 14:40:28] Action: Start Render - Render ID: 6fadde4a-0620-4a26-be63-f632aed94600
+[2026-06-19 14:40:37] Action: Render Complete - Output: 'render_67fe0b6d-214c-402b-b0e2-5ea8d4cb9cb1.mp4'
+[2026-06-19 14:42:11] Action: Transform clip
+[2026-06-19 14:42:17] Action: Transform clip
+[2026-06-19 14:42:36] Action: Transform clip
+[2026-06-19 14:42:55] Action: Transform clip
+[2026-06-19 14:42:59] Action: Adjust clip to natural aspect ratio
+[2026-06-19 14:43:07] Action: Transform clip
+[2026-06-19 14:43:45] Action: Transform clip
+[2026-06-19 14:44:21] Action: Transform clip
+[2026-06-19 14:44:22] Action: Transform clip
+[2026-06-19 14:44:30] Action: Transform clip
+[2026-06-19 14:44:31] Action: Transform clip
+[2026-06-19 14:45:47] Action: Move/Trim clip
+[2026-06-19 14:45:56] Action: Transform clip
+[2026-06-19 14:45:57] Action: Transform clip
+[2026-06-19 14:46:03] Action: Transform clip
+[2026-06-19 14:46:05] Action: Transform clip
+[2026-06-19 14:46:07] Action: Transform clip
+[2026-06-19 14:47:17] Action: Transform clip
+[2026-06-19 14:50:29] Action: Rotate clip
+[2026-06-19 14:50:44] Action: Rotate clip
+[2026-06-19 14:50:52] Action: Rotate clip
+[2026-06-19 14:51:03] Action: Transform clip
+[2026-06-19 14:51:11] Action: Transform clip
+[2026-06-19 14:51:12] Action: Transform clip
+[2026-06-19 14:51:17] Action: Transform clip
+[2026-06-19 14:51:38] Action: Transform clip
+[2026-06-19 14:51:38] Action: Transform clip
+[2026-06-19 14:51:53] Action: Transform clip
+[2026-06-19 14:51:56] Action: Transform clip
+[2026-06-19 14:53:32] Action: Move/Trim clip
+[2026-06-19 14:53:34] Action: Transform clip
+[2026-06-19 14:53:36] Action: Transform clip
+[2026-06-19 14:53:38] Action: Transform clip
+[2026-06-19 14:53:39] Action: Transform clip
+[2026-06-19 14:53:42] Action: Transform clip
+[2026-06-19 14:53:43] Action: Transform clip
+[2026-06-19 14:53:49] Action: Transform clip
+[2026-06-19 14:53:51] Action: Transform clip
+[2026-06-19 14:54:14] Action: Transform clip
+[2026-06-19 14:54:16] Action: Transform clip
+[2026-06-19 14:54:17] Action: Move/Trim clip
+[2026-06-19 14:54:19] Action: Transform clip
+[2026-06-19 14:54:20] Action: Move/Trim clip
+[2026-06-19 14:54:21] Action: Transform clip
+[2026-06-19 14:54:21] Action: Transform clip
+[2026-06-19 14:54:22] Action: Transform clip
+[2026-06-19 14:54:23] Action: Transform clip
+[2026-06-19 14:54:24] Action: Transform clip
+[2026-06-19 14:54:26] Action: Transform clip
+[2026-06-19 14:54:29] Action: Transform clip
+[2026-06-19 14:54:30] Action: Move/Trim clip
+[2026-06-19 14:54:33] Action: Transform clip
+[2026-06-19 14:54:37] Action: Move/Trim clip
+[2026-06-19 15:01:06] Action: Transform clip
+[2026-06-19 15:01:10] Action: Transform clip
+[2026-06-19 15:01:11] Action: Transform clip
+[2026-06-19 15:01:20] Action: Transform clip
+[2026-06-19 15:01:22] Action: Transform clip
+[2026-06-19 15:01:23] Action: Transform clip
+[2026-06-19 15:01:26] Action: Transform clip
+[2026-06-19 15:01:27] Action: Transform clip
+[2026-06-19 15:01:28] Action: Transform clip
+[2026-06-19 15:02:27] Action: Transform clip
+[2026-06-19 15:02:28] Action: Transform clip
+[2026-06-19 15:03:30] Action: Add text overlay
+[2026-06-19 15:03:33] Action: Move/Trim clip
+[2026-06-19 15:03:34] Action: Move/Trim clip
+[2026-06-19 15:03:34] Action: Move/Trim clip
+[2026-06-19 15:03:35] Action: Move/Trim clip
+[2026-06-19 15:03:43] Action: Edit text overlay content
+[2026-06-19 15:03:45] Action: Transform clip
+[2026-06-19 15:03:46] Action: Move/Trim clip
+[2026-06-19 15:03:48] Action: Move/Trim clip
+[2026-06-19 15:03:51] Action: Move/Trim clip
+[2026-06-19 15:03:53] Action: Move/Trim clip
+[2026-06-19 15:03:57] Action: Move/Trim clip
+[2026-06-19 15:04:01] Action: Change text font size
+[2026-06-19 15:04:05] Action: Change text color
+[2026-06-19 15:04:07] Action: Change text position
+[2026-06-19 15:04:10] Action: Change text fade in duration
+[2026-06-19 15:04:21] Action: Move/Trim clip
+[2026-06-19 15:04:23] Action: Transform clip
+[2026-06-19 15:04:24] Action: Transform clip
+[2026-06-19 15:04:26] Action: Move/Trim clip
+[2026-06-19 15:04:37] Action: Start Render - Render ID: 6d1f9951-2e1e-4c86-82e4-2dc555166067
+[2026-06-19 15:04:50] Action: Render Complete - Output: 'render_66d4e397-f9e5-4161-aa3e-56935de78c85.mp4'
+[2026-06-19 15:05:16] Action: Change text fade in duration
+[2026-06-19 15:08:01] Action: Move/Trim clip
+[2026-06-19 15:08:02] Action: Move/Trim clip
+[2026-06-19 15:08:03] Action: Split clip
+[2026-06-19 15:08:11] Action: Move/Trim clip
+[2026-06-19 15:08:13] Action: Move/Trim clip
+[2026-06-19 15:08:19] Action: Move/Trim clip
+[2026-06-19 15:08:19] Action: Move/Trim clip
+[2026-06-19 15:08:21] Action: Delete clip
+[2026-06-19 15:08:22] Action: Move/Trim clip
+[2026-06-19 15:08:25] Action: Move/Trim clip
+[2026-06-19 15:08:28] Action: Move/Trim clip
+[2026-06-19 15:08:31] Action: Move/Trim clip
+[2026-06-19 15:08:42] Action: Move/Trim clip
+[2026-06-19 15:08:49] Action: Start Render - Render ID: fb33431a-7c10-43a8-8911-a5c13694aa98
+[2026-06-19 15:08:53] Action: Render Complete - Output: 'render_baeda55a-a9e0-4b31-a730-3cd54feb77b2.mp4'
+[2026-06-19 15:11:47] Action: Move/Trim clip
+[2026-06-19 15:19:11] Action: Import file - Name: 'Screenshot_20260618_150827.jpg', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\b1befe65-d3a5-42e8-9cb7-dcbffaef773d.jpg'
+[2026-06-19 15:19:11] Action: Import file - Name: 'tempFileForShare_20260617-214024.jpg', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\034b8c2d-99df-4e58-b87c-2202811f5df1.jpg'
+[2026-06-19 15:19:12] Action: Import file - Name: 'original-888696afe6a4361b31616eb9f35514cc.png', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\ebc61330-f059-4ff8-9e61-bfc0c400ec03.png'
+[2026-06-19 15:19:12] Action: Add clip: tempFileForShare_20260617-214024.jpg
+[2026-06-19 15:19:13] Action: Add clip: Screenshot_20260618_150827.jpg
+[2026-06-19 15:19:16] Action: Move/Trim clip
+[2026-06-19 15:19:25] Action: Transform clip
+[2026-06-19 15:19:26] Action: Transform clip
+[2026-06-19 15:19:28] Action: Transform clip
+[2026-06-19 15:19:31] Action: Transform clip
+[2026-06-19 15:19:34] Action: Transform clip
+[2026-06-19 15:19:37] Action: Transform clip
+[2026-06-19 15:33:48] Action: Transform clip
+[2026-06-19 15:33:50] Action: Transform clip
+[2026-06-19 15:33:53] Action: Transform clip
+[2026-06-19 15:33:54] Action: Transform clip
+[2026-06-19 15:33:55] Action: Transform clip
+[2026-06-19 15:33:56] Action: Transform clip
+[2026-06-19 15:34:00] Action: Transform clip
+[2026-06-19 15:34:03] Action: Move/Trim clip
+[2026-06-19 15:40:02] Action: Move/Trim clip
+[2026-06-19 15:40:27] Action: Import file - Name: 'Earcon - Martin Ljungdahl (192k).mp3', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\ec9ca725-cce0-4fb4-a342-215c8939f558.mp3'
+[2026-06-19 15:40:28] Action: Import file - Name: '5d850fc9-20fd-4288-bf39-28942f347a1f.mp4', Filepath: 'C:\Users\noname\Desktop\Daily-Code\video_editor\projects\test-porject-one_1781856079\uploads\361d5388-7079-4e8a-bb76-996fafbacc85.mp4'
+[2026-06-19 15:40:32] Action: Move/Trim clip
+[2026-06-19 15:40:37] Action: Add clip: Earcon - Martin Ljungdahl (192k).mp3
+[2026-06-19 15:40:40] Action: Move/Trim clip
+[2026-06-19 15:40:45] Action: Move/Trim clip
+[2026-06-19 15:40:55] Action: Move/Trim clip
+[2026-06-19 15:40:57] Action: Move/Trim clip
+[2026-06-19 15:40:59] Action: Move/Trim clip
+[2026-06-19 15:41:00] Action: Move/Trim clip
+[2026-06-19 15:41:02] Action: Move/Trim clip
+[2026-06-19 15:41:04] Action: Add clip: 5d850fc9-20fd-4288-bf39-28942f347a1f.mp4
+[2026-06-19 15:41:11] Action: Add clip: Screenshot_20260618_150827.jpg
+[2026-06-19 15:41:15] Action: Add clip: tempFileForShare_20260617-214024.jpg
+[2026-06-19 15:41:20] Action: Add clip: render_b563cb50-ca38-48c2-a4f8-65c7cdc9a171.mp4
+[2026-06-19 15:41:22] Action: Move/Trim clip
+[2026-06-19 15:41:24] Action: Move/Trim clip
+[2026-06-19 15:41:30] Action: Move/Trim clip
+[2026-06-19 15:41:32] Action: Move/Trim clip
+[2026-06-19 15:41:33] Action: Move/Trim clip
+[2026-06-19 15:41:33] Action: Delete clip
+[2026-06-19 15:41:37] Action: Add clip: tempFileForShare_20260617-214024.jpg
+[2026-06-19 15:41:44] Action: Add clip: tempFileForShare_20260617-214024.jpg
+[2026-06-19 15:42:23] Action: Add image track
+[2026-06-19 15:43:15] Action: Start Render - Render ID: 10eeb201-ce1e-4cd0-93a5-f43aa7a83e85
+[2026-06-19 15:43:35] Action: Render Complete - Output: 'render_b21a9b5c-7ece-475d-8d07-bd58196f689e.mp4'
+[2026-06-19 15:45:30] Action: Add text track
+[2026-06-19 15:45:31] Action: Add video track
+[2026-06-19 19:12:00] Action: Transform clip

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Offline Video Editor</title>
+    <!-- Local Fonts -->
+    <link rel="stylesheet" href="/static/fonts/inter.css">
+    <!-- Local FontAwesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
+    <!-- Tailwind Built CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css?v=1.1.2">
+</head>
+<body class="bg-black text-white font-sans h-screen overflow-hidden">
+    <div class="flex h-screen relative">
+        <!-- Left Sidebar -->
+        <aside class="app-sidebar" id="app-sidebar">
+            <div class="flex flex-col items-center gap-3 pb-3 border-b border-white/10 w-full">
+                <div class="w-9 h-9 rounded-lg bg-white flex items-center justify-center flex-shrink-0" title="Antigravity Editor">
+                    <i class="fa-solid fa-wand-magic-sparkles text-black text-sm"></i>
+                </div>
+            </div>
+            <nav class="flex-1 flex flex-col items-center gap-1 py-3 w-full">
+                <button class="sidebar-btn active" data-panel="media" title="Media Library">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <span>Media</span>
+                </button>
+                <button class="sidebar-btn active" data-panel="inspector" title="Clip Properties">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Properties</span>
+                </button>
+            </nav>
+            <div class="pt-3 border-t border-white/10 w-full flex flex-col items-center gap-2">
+                <button id="btn-render" class="sidebar-btn" title="Render Video">
+                    <i class="fa-solid fa-clapperboard"></i>
+                    <span>Render</span>
+                </button>
+                <button id="btn-close-project" class="sidebar-btn hover:text-red-400" title="Exit Project">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Exit</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="app-main">
+            <!-- Workspace -->
+            <main class="workspace">
+                <!-- Media Library Panel -->
+                <section class="panel media-panel" id="panel-media">
+                    <div class="panel-header">
+                        <h3><i class="fa-solid fa-photo-film"></i> Media Library</h3>
+                    </div>
+                    <div class="panel-content">
+                        <div class="import-area" id="import-dropzone">
+                            <i class="fa-solid fa-cloud-arrow-up import-icon"></i>
+                            <p>Drag files here or <span>browse</span></p>
+                            <input type="file" id="file-input" multiple accept="video/*,audio/*,image/*" class="hidden">
+                        </div>
+                        <div class="media-list" id="media-list">
+                            <div class="empty-state">
+                                <i class="fa-regular fa-folder-open"></i>
+                                <p>No media imported yet</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Preview Monitor -->
+                <section class="panel preview-panel" id="panel-preview">
+                    <div class="panel-content preview-content relative">
+                        <div id="monitor-zoom-badge" class="zoom-badge">100%</div>
+                        <div class="monitor-wrapper">
+                            <div class="monitor" id="video-monitor">
+                                <div class="monitor-canvas-container" id="monitor-canvas-container"></div>
+                                <div id="text-overlay-container" class="text-overlay-container"></div>
+                                <div class="monitor-overlay-grid"></div>
+                                <div id="clip-transform-box" class="absolute pointer-events-none border border-white/80 hidden z-30 select-none">
+                                    <div class="transform-anchor top-left cursor-nwse-resize" data-anchor="top-left"></div>
+                                    <div class="transform-anchor top-right cursor-nesw-resize" data-anchor="top-right"></div>
+                                    <div class="transform-anchor bottom-left cursor-nesw-resize" data-anchor="bottom-left"></div>
+                                    <div class="transform-anchor bottom-right cursor-nwse-resize" data-anchor="bottom-right"></div>
+                                    <div class="rotate-handle-line"></div>
+                                    <div class="rotate-handle cursor-grab" data-anchor="rotate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Inspector Panel -->
+                <section class="panel inspector-panel" id="panel-inspector">
+                    <div class="panel-header">
+                        <h3><i class="fa-solid fa-sliders"></i> Clip Properties</h3>
+                    </div>
+                    <div class="panel-content" id="inspector-content">
+                        <div class="empty-state">
+                            <i class="fa-solid fa-arrow-pointer"></i>
+                            <p>Select a clip to edit properties</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Timeline -->
+            <footer class="app-timeline" id="app-timeline">
+                <div class="timeline-resize-handle" id="timeline-resizer"></div>
+
+                <!-- Timeline Control Strip -->
+                <div class="timeline-control-strip">
+                    <!-- Left: Edit Tools -->
+                    <div class="flex items-center gap-2">
+                        <button id="btn-split" class="timeline-tool-btn" title="Split Clip (S)">
+                            <i class="fa-solid fa-scissors"></i>
+                        </button>
+                        <button id="btn-delete" class="timeline-tool-btn text-red-400 hover:text-red-300" title="Delete Selected Clip (Delete)">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <button id="btn-snap" class="timeline-tool-btn active" title="Toggle Magnetic Snap (N)">
+                            <i class="fa-solid fa-magnet"></i>
+                        </button>
+                        <button id="btn-add-text" class="timeline-tool-btn" title="Add Text Overlay">
+                            <i class="fa-solid fa-t"></i>
+                        </button>
+                        <div class="relative flex items-center pl-1.5 border-l border-white/10 ml-1.5">
+                            <button id="btn-add-track" class="timeline-tool-btn" title="Add Timeline Track">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <div id="add-track-dropdown" class="hidden absolute left-0 bottom-7 bg-neutral-900 border border-white/10 rounded shadow-xl py-1 z-[60] w-28 text-left text-[9px] uppercase tracking-wider font-semibold">
+                                <button class="w-full text-left px-2.5 py-1.5 text-neutral-400 hover:bg-neutral-800 hover:text-white flex items-center gap-1.5" data-track-type="video"><i class="fa-solid fa-video"></i> Video Track</button>
+                                <button class="w-full text-left px-2.5 py-1.5 text-neutral-400 hover:bg-neutral-800 hover:text-white flex items-center gap-1.5" data-track-type="image"><i class="fa-solid fa-image"></i> Image Track</button>
+                                <button class="w-full text-left px-2.5 py-1.5 text-neutral-400 hover:bg-neutral-800 hover:text-white flex items-center gap-1.5" data-track-type="text"><i class="fa-solid fa-t"></i> Text Track</button>
+                                <button class="w-full text-left px-2.5 py-1.5 text-neutral-400 hover:bg-neutral-800 hover:text-white flex items-center gap-1.5" data-track-type="audio"><i class="fa-solid fa-volume-high"></i> Audio Track</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center: Playback Controls & Info -->
+                    <div class="flex items-center gap-3">
+                        <!-- Aspect Ratio -->
+                        <div class="relative flex items-center pr-2.5 border-r border-white/10 h-5">
+                            <select id="aspect-ratio-select" class="bg-neutral-900 border border-white/10 text-neutral-400 hover:text-white text-[9px] rounded px-1.5 py-0.5 h-5 cursor-pointer focus:outline-none focus:border-white/20" title="Aspect Ratio">
+                                <option value="16:9">16:9</option>
+                                <option value="9:16">9:16</option>
+                                <option value="1:1">1:1</option>
+                                <option value="4:3">4:3</option>
+                            </select>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex items-center gap-2">
+                            <button id="btn-prev-frame" class="timeline-tool-btn" title="Previous Frame (Left Arrow)">
+                                <i class="fa-solid fa-backward-step"></i>
+                            </button>
+                            <button id="btn-play-pause" class="timeline-tool-btn !rounded-full" title="Play/Pause (Space)">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <button id="btn-next-frame" class="timeline-tool-btn" title="Next Frame (Right Arrow)">
+                                <i class="fa-solid fa-forward-step"></i>
+                            </button>
+                        </div>
+
+                        <!-- Timecode Display -->
+                        <div class="flex items-center gap-1.5 font-mono text-[10px] ml-1.5 text-neutral-500 bg-neutral-900 border border-white/10 px-2 py-0.5 rounded h-5" title="Timecode">
+                            <span id="current-time-code" class="text-white font-semibold">00:00.00</span>
+                            <span class="text-neutral-600">/</span>
+                            <span id="total-time-code" class="text-neutral-500">00:10.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Zoom Controls -->
+                    <div class="zoom-controls pr-2">
+                        <i class="fa-solid fa-magnifying-glass-minus"></i>
+                        <input type="range" id="timeline-zoom" min="5" max="100" value="30" title="Timeline zoom">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-toolbar">
+                    <div class="timeline-header-corner">Tracks</div>
+                    <div class="ruler-container" id="timeline-ruler-container">
+                        <canvas id="timeline-ruler" height="24"></canvas>
+                    </div>
+                </div>
+
+                <div class="timeline-workspace" id="timeline-workspace">
+                    <div class="playhead" id="timeline-playhead">
+                        <div class="playhead-head"></div>
+                    </div>
+
+                    <div id="timeline-tracks-container" class="w-full">
+                        <!-- Dynamic track rows will be injected here by JS -->
+                    </div>
+                </div>
+            </footer>
+        </div> <!-- .app-main -->
+    </div>
+
+    <!-- Render Progress Modal -->
+    <div class="modal-overlay" id="render-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Rendering Video...</h2>
+            </div>
+            <div class="modal-body">
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="render-progress-fill">0%</div>
+                </div>
+                <p id="render-status-text">Processing filtergraphs & assets...</p>
+            </div>
+            <div class="modal-footer" id="modal-footer-actions">
+                <button class="btn btn-secondary" id="btn-close-modal" disabled>Close</button>
+                <a href="#" class="btn btn-primary" id="btn-download-render" style="display: none;" download>
+                    <i class="fa-solid fa-download"></i> Download Video
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Dashboard Overlay -->
+    <div class="project-dashboard-overlay active" id="project-dashboard">
+        <div class="project-dashboard">
+            <!-- Left: Create Project Form -->
+            <div class="project-create-pane">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-wand-magic-sparkles text-black text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base font-bold tracking-tight">Antigravity Editor</h1>
+                        <p class="text-[0.6rem] text-neutral-500 uppercase tracking-widest leading-none mt-1">Offline Video Engine</p>
+                    </div>
+                </div>
+
+                <h2 class="text-[0.7rem] font-semibold uppercase tracking-wider text-neutral-500 mb-4">Create New Project</h2>
+                <form id="form-create-project" class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1.5">
+                        <label for="project-name" class="text-xs text-neutral-400">Project Name</label>
+                        <input type="text" id="project-name" required placeholder="My Awesome Video"
+                               class="bg-neutral-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-white/30">
+                    </div>
+                    <div class="flex flex-col gap-1.5">
+                        <label for="project-aspect" class="text-xs text-neutral-400">Aspect Ratio</label>
+                        <select id="project-aspect" class="bg-neutral-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-white/30 cursor-pointer">
+                            <option value="16:9">16:9 (Widescreen)</option>
+                            <option value="9:16">9:16 (Portrait / Shorts)</option>
+                            <option value="1:1">1:1 (Square)</option>
+                            <option value="4:3">4:3 (Standard)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-white text-black font-semibold text-xs py-2.5 rounded-lg transition hover:bg-neutral-200 mt-2 cursor-pointer">
+                        <i class="fa-solid fa-plus mr-1"></i> Create Project
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Project List -->
+            <div class="project-list-pane">
+                <h2 class="text-[0.7rem] font-semibold uppercase tracking-wider text-neutral-500 mb-4 flex items-center justify-between">
+                    <span>Existing Projects</span>
+                    <span id="project-count" class="text-[0.6rem] font-mono bg-neutral-900 border border-white/10 px-2 py-0.5 rounded text-neutral-400">0</span>
+                </h2>
+                <div class="project-list" id="project-list-container">
+                    <div class="empty-projects-state">
+                        <i class="fa-regular fa-folder-open text-3xl mb-3 text-neutral-600"></i>
+                        <p class="text-xs text-neutral-500">No projects found. Create one on the left!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Container -->
+    <div id="hidden-preview-container" class="hidden"></div>
+
+    <!-- Application Javascript -->
+    <script src="/static/js/preview.js?v=1.0.4"></script>
+    <script src="/static/js/timeline.js?v=1.0.5"></script>
+    <script src="/static/js/app.js?v=1.0.4"></script>
+</body>
+</html>

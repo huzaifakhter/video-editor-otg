@@ -1,0 +1,33 @@
+[2026-06-19 19:18:29] Project Created: 'Third Project' with aspect ratio 16:9
+[2026-06-19 19:18:51] Action: Import file - Name: 'Gemini_Generated_Image_p4lf0yp4lf0yp4lf (1).png', Filepath: 'C:\Projects\video-editor-otg\engine\projects\third-project_1781876909\uploads\75143346-6b76-4474-a11f-3ed015f62b81.png'
+[2026-06-19 19:18:52] Action: Import file - Name: 'Pura_intención.mp4', Filepath: 'C:\Projects\video-editor-otg\engine\projects\third-project_1781876909\uploads\d40f2b97-5525-4bce-afa4-b153e7e3844d.mp4'
+[2026-06-19 19:18:54] Action: Add clip: Pura_intención.mp4
+[2026-06-19 19:18:55] Action: Add clip: Gemini_Generated_Image_p4lf0yp4lf0yp4lf (1).png
+[2026-06-19 19:18:59] Action: Move/Trim clip
+[2026-06-19 19:19:02] Action: Move/Trim clip
+[2026-06-19 19:19:05] Action: Move/Trim clip
+[2026-06-19 19:19:13] Action: Transform clip
+[2026-06-19 19:19:16] Action: Transform clip
+[2026-06-19 19:19:17] Action: Transform clip
+[2026-06-19 19:19:17] Action: Move/Trim clip
+[2026-06-19 19:19:19] Action: Transform clip
+[2026-06-19 19:19:21] Action: Transform clip
+[2026-06-19 19:19:23] Action: Transform clip
+[2026-06-19 19:19:24] Action: Transform clip
+[2026-06-19 19:19:27] Action: Transform clip
+[2026-06-19 19:19:28] Action: Transform clip
+[2026-06-19 19:19:29] Action: Transform clip
+[2026-06-19 19:19:31] Action: Transform clip
+[2026-06-19 19:19:33] Action: Transform clip
+[2026-06-19 19:19:35] Action: Transform clip
+[2026-06-19 19:19:39] Action: Transform clip
+[2026-06-19 19:19:43] Action: Transform clip
+[2026-06-19 19:19:47] Action: Transform clip
+[2026-06-19 19:19:58] Action: Start Render - Render ID: a300ab32-38d8-4800-978b-b1c3abdbb721
+[2026-06-19 19:24:31] Action: Render Complete - Output: 'render_427f820f-803a-4f73-aeaf-61890ee3dae7.mp4'
+[2026-06-19 19:26:21] Action: Move/Trim clip
+[2026-06-19 19:26:24] Action: Move/Trim clip
+[2026-06-19 19:26:31] Action: Move/Trim clip
+[2026-06-19 19:26:34] Action: Move/Trim clip
+[2026-06-19 19:26:38] Action: Move/Trim clip
+[2026-06-19 19:26:41] Action: Move/Trim clip

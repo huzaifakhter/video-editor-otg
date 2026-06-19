@@ -1,0 +1,431 @@
+{
+    "aspectRatio": "9:16",
+    "clips": [
+        {
+            "clipEnd": 2.2799998474121095,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 2.2799998474121095,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\ff1e323d-7ace-45ff-9340-48b0a1a8cde0.mp4",
+            "height": 1098,
+            "id": "clip_5j2fomn4t",
+            "metadata": {
+                "has_audio": true,
+                "has_video": true,
+                "height": 1425,
+                "is_image": false,
+                "width": 2528
+            },
+            "name": "render_b563cb50-ca38-48c2-a4f8-65c7cdc9a171.mp4",
+            "rotation": 0,
+            "sourceDuration": 10,
+            "speed": 1,
+            "start": 0,
+            "track": "video",
+            "trackId": "video-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "video",
+            "url": "/projects/test-porject-one_1781856079/uploads/ff1e323d-7ace-45ff-9340-48b0a1a8cde0.mp4",
+            "volume": 1,
+            "width": 1947,
+            "x": -622,
+            "y": 151
+        },
+        {
+            "clipEnd": 7.630166539450485,
+            "clipStart": 2.2799998474121095,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 7.630166539450485,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\ff1e323d-7ace-45ff-9340-48b0a1a8cde0.mp4",
+            "height": 1098,
+            "id": "clip_978vzoa11",
+            "metadata": {
+                "has_audio": true,
+                "has_video": true,
+                "height": 1425,
+                "is_image": false,
+                "width": 2528
+            },
+            "name": "render_b563cb50-ca38-48c2-a4f8-65c7cdc9a171.mp4",
+            "rotation": 0,
+            "sourceDuration": 10,
+            "speed": 1,
+            "start": 2.2799998474121095,
+            "track": "video",
+            "trackId": "video-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "video",
+            "url": "/projects/test-porject-one_1781856079/uploads/ff1e323d-7ace-45ff-9340-48b0a1a8cde0.mp4",
+            "volume": 1,
+            "width": 1947,
+            "x": -622,
+            "y": 151
+        },
+        {
+            "clipEnd": 11.226833206117153,
+            "color": "#ff0000",
+            "end": 11.226833206117153,
+            "fadeIn": 0.9,
+            "fadeOut": 0.5,
+            "fontSize": 84,
+            "id": "clip_jzhnj6daa",
+            "position": "top",
+            "start": 0,
+            "text": "New Text",
+            "track": "text",
+            "trackId": "text-1",
+            "type": "text"
+        },
+        {
+            "clipEnd": 5,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 5,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "height": 897,
+            "id": "clip_sjjgj9ntf",
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1695,
+                "is_image": true,
+                "width": 1079
+            },
+            "name": "tempFileForShare_20260617-214024.jpg",
+            "rotation": 0,
+            "sourceDuration": 9999,
+            "speed": 1,
+            "start": 0,
+            "trackId": "image-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "image",
+            "url": "/projects/test-porject-one_1781856079/uploads/034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "volume": 1,
+            "width": 571,
+            "x": 60,
+            "y": 171
+        },
+        {
+            "clipEnd": 5,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 10,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\b1befe65-d3a5-42e8-9cb7-dcbffaef773d.jpg",
+            "height": 1280,
+            "id": "clip_ni7ozbvwb",
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 2340,
+                "is_image": true,
+                "width": 1080
+            },
+            "name": "Screenshot_20260618_150827.jpg",
+            "rotation": 0,
+            "sourceDuration": 9999,
+            "speed": 1,
+            "start": 5,
+            "trackId": "image-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "image",
+            "url": "/projects/test-porject-one_1781856079/uploads/b1befe65-d3a5-42e8-9cb7-dcbffaef773d.jpg",
+            "volume": 1,
+            "width": 591,
+            "x": 65,
+            "y": 0
+        },
+        {
+            "clipEnd": 8.672653,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 16.122652904632567,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\ec9ca725-cce0-4fb4-a342-215c8939f558.mp3",
+            "id": "clip_prxcfe26b",
+            "metadata": {
+                "has_audio": true,
+                "has_video": false,
+                "is_image": false
+            },
+            "name": "Earcon - Martin Ljungdahl (192k).mp3",
+            "sourceDuration": 8.672653,
+            "speed": 1,
+            "start": 7.449999904632568,
+            "trackId": "audio-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "audio",
+            "url": "/projects/test-porject-one_1781856079/uploads/ec9ca725-cce0-4fb4-a342-215c8939f558.mp3",
+            "volume": 1
+        },
+        {
+            "clipEnd": 46.001,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 61.975999904632566,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\361d5388-7079-4e8a-bb76-996fafbacc85.mp4",
+            "height": 540,
+            "id": "clip_skbmd6z6h",
+            "metadata": {
+                "duration": 46.001,
+                "has_audio": true,
+                "has_video": true,
+                "height": 240,
+                "is_image": false,
+                "width": 320
+            },
+            "name": "5d850fc9-20fd-4288-bf39-28942f347a1f.mp4",
+            "rotation": 0,
+            "sourceDuration": 46.001,
+            "speed": 1,
+            "start": 15.974999904632568,
+            "trackId": "video-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "video",
+            "url": "/projects/test-porject-one_1781856079/uploads/361d5388-7079-4e8a-bb76-996fafbacc85.mp4",
+            "volume": 1,
+            "width": 720,
+            "x": 0,
+            "y": 370
+        },
+        {
+            "clipEnd": 5,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 51.199999237060545,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\b1befe65-d3a5-42e8-9cb7-dcbffaef773d.jpg",
+            "height": 1280,
+            "id": "clip_0cxzenwew",
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 2340,
+                "is_image": true,
+                "width": 1080
+            },
+            "name": "Screenshot_20260618_150827.jpg",
+            "rotation": 0,
+            "sourceDuration": 9999,
+            "speed": 1,
+            "start": 46.199999237060545,
+            "trackId": "image-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "image",
+            "url": "/projects/test-porject-one_1781856079/uploads/b1befe65-d3a5-42e8-9cb7-dcbffaef773d.jpg",
+            "volume": 1,
+            "width": 591,
+            "x": 65,
+            "y": 0
+        },
+        {
+            "clipEnd": 5,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 34.599999237060544,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "height": 1131,
+            "id": "clip_sppsvjwwo",
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1695,
+                "is_image": true,
+                "width": 1079
+            },
+            "name": "tempFileForShare_20260617-214024.jpg",
+            "rotation": 0,
+            "sourceDuration": 9999,
+            "speed": 1,
+            "start": 29.599999237060548,
+            "trackId": "image-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "image",
+            "url": "/projects/test-porject-one_1781856079/uploads/034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "volume": 1,
+            "width": 720,
+            "x": 0,
+            "y": 74
+        },
+        {
+            "clipEnd": 5,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 62.39999923706055,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "height": 1131,
+            "id": "clip_4gojb1teo",
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1695,
+                "is_image": true,
+                "width": 1079
+            },
+            "name": "tempFileForShare_20260617-214024.jpg",
+            "rotation": 0,
+            "sourceDuration": 9999,
+            "speed": 1,
+            "start": 57.39999923706055,
+            "trackId": "image-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "image",
+            "url": "/projects/test-porject-one_1781856079/uploads/034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "volume": 1,
+            "width": 720,
+            "x": 0,
+            "y": 74
+        },
+        {
+            "clipEnd": 5,
+            "clipStart": 0,
+            "effects": {
+                "brightness": 1,
+                "contrast": 1,
+                "grayscale": false,
+                "sepia": false
+            },
+            "end": 24.599999237060548,
+            "filepath": "C:\\Users\\noname\\Desktop\\Daily-Code\\video_editor\\projects\\test-porject-one_1781856079\\uploads\\034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "height": 1131,
+            "id": "clip_enarwlkbb",
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1695,
+                "is_image": true,
+                "width": 1079
+            },
+            "name": "tempFileForShare_20260617-214024.jpg",
+            "rotation": 0,
+            "sourceDuration": 9999,
+            "speed": 1,
+            "start": 19.599999237060548,
+            "trackId": "image-1",
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "type": "image",
+            "url": "/projects/test-porject-one_1781856079/uploads/034b8c2d-99df-4e58-b87c-2202811f5df1.jpg",
+            "volume": 1,
+            "width": 720,
+            "x": 0,
+            "y": 74
+        }
+    ],
+    "duration": 62.39999923706055,
+    "name": "Test Porject One",
+    "tracks": [
+        {
+            "icon": "fa-t",
+            "id": "text-1",
+            "type": "text"
+        },
+        {
+            "icon": "fa-image",
+            "id": "image-1",
+            "type": "image"
+        },
+        {
+            "icon": "fa-video",
+            "id": "video-1",
+            "type": "video"
+        },
+        {
+            "icon": "fa-volume-high",
+            "id": "audio-1",
+            "type": "audio"
+        },
+        {
+            "icon": "fa-image",
+            "id": "image-2-gpjd",
+            "type": "image"
+        },
+        {
+            "icon": "fa-t",
+            "id": "text-2-w066",
+            "type": "text"
+        },
+        {
+            "icon": "fa-video",
+            "id": "video-2-vn1r",
+            "type": "video"
+        }
+    ]
+}

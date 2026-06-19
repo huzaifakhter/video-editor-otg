@@ -1,0 +1,728 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Base Reset ===== */
+@layer base {
+    body {
+        @apply bg-black text-white font-sans h-screen overflow-hidden;
+    }
+
+    * {
+        @apply box-border m-0 p-0;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-1.5 h-1.5;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-full;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* ===== Component Classes (referenced by JS) ===== */
+@layer components {
+
+    /* --- Sidebar --- */
+    .app-sidebar {
+        @apply w-14 fixed top-0 left-0 h-screen bg-neutral-950 border-r border-white/10
+               flex flex-col items-center z-50 py-3 overflow-hidden;
+        transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+    }
+
+    .app-sidebar:hover {
+        @apply w-40 shadow-2xl;
+    }
+
+    .sidebar-btn {
+        @apply w-10 h-10 flex flex-col items-center justify-center gap-0.5
+               bg-transparent border-none rounded-lg text-neutral-500 cursor-pointer
+               transition-all duration-200 relative overflow-hidden whitespace-nowrap;
+        font-family: inherit;
+    }
+
+    .sidebar-btn i {
+        @apply text-base flex-shrink-0;
+    }
+
+    .sidebar-btn span {
+        @apply text-[0.55rem] font-medium uppercase tracking-wide opacity-0 w-0 overflow-hidden;
+        transition: opacity 0.2s ease 0.05s, width 0.25s ease;
+    }
+
+    .app-sidebar:hover .sidebar-btn {
+        @apply w-32 flex-row justify-start pl-3 gap-2.5;
+    }
+
+    .app-sidebar:hover .sidebar-btn span {
+        @apply opacity-100 w-auto text-xs normal-case;
+    }
+
+    .sidebar-btn:hover {
+        @apply text-white bg-white/5;
+    }
+
+    .sidebar-btn.active {
+        @apply text-white bg-white/10;
+    }
+
+    .sidebar-btn.active::before {
+        content: '';
+        @apply absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-5 bg-white rounded-r;
+    }
+
+    /* --- App Layout --- */
+    .app-main {
+        @apply flex-1 flex flex-col min-w-0 h-screen;
+        margin-left: 3.5rem; /* matches sidebar w-14 */
+    }
+
+    .workspace {
+        @apply flex-1 flex overflow-hidden;
+        height: calc(100vh - var(--timeline-height, 260px));
+    }
+
+    /* --- Panels --- */
+    .panel {
+        @apply bg-neutral-950 border-r border-white/10 flex flex-col;
+    }
+
+    .panel-header {
+        @apply px-4 py-3 border-b border-white/10 text-xs uppercase tracking-widest text-neutral-500;
+    }
+
+    .panel-header h3 {
+        @apply font-semibold flex items-center gap-2 text-xs;
+    }
+
+    .panel-content {
+        @apply flex-1 overflow-y-auto p-4;
+    }
+
+    .media-panel {
+        @apply w-64 flex-shrink-0;
+    }
+
+    .preview-panel {
+        @apply flex-1 border-r border-white/10;
+    }
+
+    .preview-content {
+        @apply flex flex-col items-center justify-center p-4;
+    }
+
+    .inspector-panel {
+        @apply w-64 flex-shrink-0 border-r-0;
+    }
+
+    /* --- Import Area --- */
+    .import-area {
+        @apply border-2 border-dashed border-white/10 rounded-lg py-6 px-4 text-center
+               cursor-pointer transition-all duration-200 mb-4 bg-white/[0.01];
+    }
+
+    .import-area:hover,
+    .import-area.dragover {
+        @apply border-white/30 bg-white/[0.03];
+    }
+
+    .import-icon {
+        @apply text-2xl text-neutral-500 mb-2 transition-transform duration-200;
+    }
+
+    .import-area:hover .import-icon {
+        @apply -translate-y-1 text-white;
+    }
+
+    .import-area p {
+        @apply text-xs text-neutral-500;
+    }
+
+    .import-area p span {
+        @apply text-white font-medium;
+    }
+
+    /* --- Media Items --- */
+    .media-list {
+        @apply flex flex-col gap-2;
+    }
+
+    .empty-state {
+        @apply flex flex-col items-center justify-center py-10 px-2 text-center text-neutral-600;
+    }
+
+    .empty-state i {
+        @apply text-2xl mb-3;
+    }
+
+    .empty-state p {
+        @apply text-xs;
+    }
+
+    .media-item {
+        @apply bg-neutral-900 border border-white/10 rounded-md p-2.5 flex items-center gap-3
+               cursor-grab select-none transition-all duration-200;
+    }
+
+    .media-item:hover {
+        @apply border-white/20 bg-neutral-800;
+    }
+
+    .media-thumbnail {
+        @apply w-12 h-9 rounded bg-black flex items-center justify-center overflow-hidden flex-shrink-0;
+    }
+
+    .media-thumbnail i {
+        @apply text-sm;
+    }
+
+    .media-thumbnail.video { @apply text-white; }
+    .media-thumbnail.audio { @apply text-neutral-400; }
+    .media-thumbnail.image { @apply text-neutral-400; }
+
+    .media-thumbnail img {
+        @apply w-full h-full object-cover;
+    }
+
+    .media-info {
+        @apply flex-1 min-w-0;
+    }
+
+    .media-name {
+        @apply text-xs font-medium truncate mb-0.5;
+    }
+
+    .media-meta {
+        @apply text-[0.7rem] text-neutral-500;
+    }
+
+    .media-action-add {
+        @apply bg-transparent border-none text-neutral-500 cursor-pointer text-sm transition-colors duration-200;
+    }
+
+    .media-action-add:hover {
+        @apply text-white;
+    }
+
+    /* --- Monitor --- */
+    .monitor-wrapper {
+        @apply flex-1 w-full flex items-center justify-center min-h-0 overflow-hidden;
+    }
+
+    .monitor {
+        @apply w-full max-w-[800px] bg-[#1a1a1a] rounded-lg relative;
+        aspect-ratio: 16 / 9;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .monitor-canvas-container {
+        @apply w-full h-full relative flex items-center justify-center overflow-hidden rounded-lg;
+    }
+
+    .monitor-canvas-container video,
+    .monitor-canvas-container img {
+        @apply absolute hidden cursor-pointer pointer-events-auto;
+        object-fit: fill;
+    }
+
+    .monitor-canvas-container video.active,
+    .monitor-canvas-container img.active {
+        @apply block;
+    }
+
+    .text-overlay-container {
+        @apply absolute top-0 left-0 w-full h-full pointer-events-none z-10 overflow-hidden rounded-lg;
+    }
+
+    .text-overlay-item {
+        @apply absolute left-1/2 -translate-x-1/2 font-semibold text-center whitespace-pre-wrap
+               pointer-events-none opacity-0 transition-opacity duration-150;
+        font-family: inherit;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+                     -1px -1px 0 rgba(0, 0, 0, 0.8),
+                     1px -1px 0 rgba(0, 0, 0, 0.8),
+                     -1px 1px 0 rgba(0, 0, 0, 0.8),
+                     1px 1px 0 rgba(0, 0, 0, 0.8);
+    }
+
+    .text-overlay-item.active {
+        @apply opacity-100;
+    }
+
+    .monitor-overlay-grid {
+        @apply absolute pointer-events-none rounded;
+        top: 5%; left: 5%; right: 5%; bottom: 5%;
+        border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+
+    .zoom-badge {
+        @apply absolute top-2 right-2 bg-black/60 text-neutral-400 px-2 py-1 rounded text-[0.7rem]
+               font-mono z-50 pointer-events-none border border-white/10;
+    }
+
+    /* --- Transport Bar --- */
+    .transport-bar {
+        @apply w-full max-w-[800px] flex items-center justify-between mt-3 bg-neutral-950
+               px-4 py-2.5 rounded-lg border border-white/10;
+    }
+
+    .control-group {
+        @apply flex items-center gap-2;
+    }
+
+    .playback-controls {
+        @apply flex items-center gap-3;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+        @apply inline-flex items-center gap-2 px-4 py-2 rounded-md font-medium cursor-pointer
+               transition-all duration-200 border border-transparent text-sm;
+        font-family: inherit;
+    }
+
+    .btn-primary {
+        @apply bg-white text-black;
+    }
+
+    .btn-primary:hover {
+        @apply bg-neutral-200;
+    }
+
+    .btn-secondary {
+        @apply bg-neutral-900 text-white border-white/10;
+    }
+
+    .btn-secondary:hover {
+        @apply bg-neutral-800 border-white/20;
+    }
+
+    .btn-secondary.active {
+        @apply bg-white text-black border-white;
+    }
+
+    .btn-danger {
+        @apply bg-neutral-800 text-red-400;
+    }
+
+    .btn-danger:hover {
+        @apply bg-red-950 text-red-300;
+    }
+
+    .btn-icon {
+        @apply w-9 h-9 p-0 justify-center;
+    }
+
+    .btn-icon-small {
+        @apply bg-transparent border-none text-neutral-500 cursor-pointer text-base
+               w-8 h-8 flex items-center justify-center rounded-full transition-all duration-200;
+    }
+
+    .btn-icon-small:hover {
+        @apply bg-white/5 text-white;
+    }
+
+    .btn-play {
+        @apply w-10 h-10 rounded-full bg-white text-black border-none cursor-pointer
+               flex items-center justify-center text-base transition-all duration-200;
+    }
+
+    .btn-play:hover {
+        @apply scale-105 bg-neutral-200;
+    }
+
+    .zoom-controls {
+        @apply flex items-center gap-2 text-neutral-500 text-xs;
+    }
+
+    .zoom-controls input[type="range"] {
+        @apply w-24 h-1 cursor-pointer accent-white;
+    }
+
+    /* --- Inspector --- */
+    .inspector-group {
+        @apply border-b border-white/10 pb-4 mb-4;
+    }
+
+    .inspector-group:last-child {
+        @apply border-b-0;
+    }
+
+    .inspector-group h4 {
+        @apply text-[0.7rem] uppercase text-neutral-600 tracking-wide mb-3;
+    }
+
+    .property-control {
+        @apply mb-3;
+    }
+
+    .property-control:last-child {
+        @apply mb-0;
+    }
+
+    .property-control label {
+        @apply block text-xs text-neutral-400 mb-1.5;
+    }
+
+    .property-value {
+        @apply flex items-center gap-2.5;
+    }
+
+    .property-control input[type="range"] {
+        @apply flex-1 h-1 accent-white;
+    }
+
+    .property-value span {
+        @apply font-mono text-xs min-w-[2rem] text-right;
+    }
+
+    .property-control select,
+    .property-control input[type="text"],
+    .property-control input[type="color"] {
+        @apply w-full bg-neutral-900 border border-white/10 text-white p-2 rounded text-xs;
+        font-family: inherit;
+    }
+
+    .property-control input[type="color"] {
+        @apply h-9 p-0.5 cursor-pointer;
+    }
+
+    .property-control input:focus,
+    .property-control select:focus {
+        @apply outline-none border-white/30;
+    }
+
+    .checkbox-label {
+        @apply flex items-center gap-2 cursor-pointer select-none text-xs;
+    }
+
+    .checkbox-label input {
+        @apply accent-white w-4 h-4;
+    }
+
+    /* --- Timeline --- */
+    .timeline-control-strip {
+        @apply h-6 border-b border-white/10 flex items-center justify-between bg-neutral-950 px-2 flex-shrink-0;
+    }
+
+    .timeline-tool-btn {
+        @apply w-5 h-5 flex items-center justify-center rounded bg-transparent border border-transparent
+               text-neutral-400 text-[10px] transition-all duration-200 hover:bg-white/5 hover:text-white cursor-pointer;
+    }
+
+    .timeline-tool-btn.active {
+        @apply bg-white/10 text-white border-transparent hover:bg-white/15;
+    }
+
+    .app-timeline {
+        @apply relative bg-neutral-950 border-t border-white/10 flex flex-col z-40;
+        height: var(--timeline-height, 260px);
+    }
+
+    .timeline-resize-handle {
+        @apply absolute -top-1 left-0 right-0 h-2 cursor-ns-resize z-50 bg-transparent
+               transition-colors duration-200;
+    }
+
+    .timeline-resize-handle:hover,
+    .timeline-resize-handle.active {
+        @apply bg-white;
+    }
+
+    .timeline-toolbar {
+        @apply h-6 border-b border-white/10 flex;
+    }
+
+    .timeline-header-corner {
+        @apply w-16 border-r border-white/10 flex items-center justify-center
+               text-[0.65rem] uppercase tracking-wide text-neutral-600;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .ruler-container {
+        @apply flex-1 overflow-hidden relative;
+    }
+
+    #timeline-ruler {
+        @apply block absolute left-0 top-0;
+    }
+
+    .timeline-workspace {
+        @apply flex-1 overflow-auto relative;
+    }
+
+    /* --- Playhead --- */
+    .playhead {
+        @apply absolute top-0 bottom-0 w-0.5 bg-red-500 z-30 pointer-events-none;
+        left: 0px;
+    }
+
+    .playhead-head {
+        @apply w-3 h-3 bg-red-500 absolute -top-1.5 -left-[5px] rounded-tl;
+        transform: rotate(45deg);
+    }
+
+    /* --- Track Row --- */
+    .track-row {
+        @apply flex border-b border-white/10 h-10 relative;
+    }
+
+    .track-header {
+        @apply w-16 border-r border-white/10 flex items-center justify-center
+               text-neutral-500 z-20 flex-shrink-0 relative;
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .track-header i {
+        @apply text-center text-xs;
+    }
+
+    .delete-track-btn {
+        @apply absolute right-0.5 top-0.5 text-[8px] text-neutral-600 hover:text-red-400 transition-colors duration-150 cursor-pointer hidden;
+    }
+
+    .track-header:hover .delete-track-btn {
+        display: block;
+    }
+
+    .track-row[data-track-type="video"] .track-header i { @apply text-white; }
+    .track-row[data-track-type="image"] .track-header i { @apply text-neutral-300; }
+    .track-row[data-track-type="audio"] .track-header i { @apply text-neutral-400; }
+    .track-row[data-track-type="text"]  .track-header i { @apply text-neutral-400; }
+
+    .track-body {
+        @apply flex-1 relative h-full;
+        background: rgba(255, 255, 255, 0.005);
+    }
+
+    /* --- Timeline Clips --- */
+    .timeline-clip {
+        @apply absolute rounded flex items-center px-2 cursor-pointer select-none overflow-hidden
+               transition-all duration-150;
+        top: 4px;
+        height: 32px;
+        background-color: #222;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .timeline-clip:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .timeline-clip.selected {
+        @apply border-white;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .timeline-clip.clip-video {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+        border-left: 4px solid #fff;
+    }
+
+    .timeline-clip.clip-image {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+        border-left: 4px solid #999;
+    }
+
+    .timeline-clip.clip-audio {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        border-left: 4px solid #666;
+    }
+
+    .timeline-clip.clip-text {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+        border-left: 4px solid #888;
+    }
+
+    .clip-title {
+        @apply text-[0.7rem] font-medium truncate pointer-events-none flex-1;
+    }
+
+    .clip-duration-tag {
+        @apply text-[0.6rem] text-white/50 font-mono ml-1.5 pointer-events-none;
+    }
+
+    /* --- Clip Trim Handles --- */
+    .clip-handle {
+        @apply absolute top-0 bottom-0 w-1.5 cursor-ew-resize hidden items-center justify-center;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .timeline-clip:hover .clip-handle,
+    .timeline-clip.selected .clip-handle {
+        @apply flex;
+    }
+
+    .clip-handle:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .clip-handle-left {
+        @apply left-0 rounded-l-md;
+    }
+
+    .clip-handle-right {
+        @apply right-0 rounded-r-md;
+    }
+
+    /* --- Modal --- */
+    .modal-overlay {
+        @apply fixed inset-0 bg-black/85 z-[200] flex items-center justify-center
+               opacity-0 pointer-events-none transition-opacity duration-300;
+    }
+
+    .modal-overlay.active {
+        @apply opacity-100 pointer-events-auto;
+    }
+
+    .modal {
+        @apply bg-neutral-950 border border-white/10 rounded-xl w-[480px] max-w-[90%]
+               p-6 flex flex-col gap-4;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-header h2 {
+        @apply text-lg font-semibold;
+    }
+
+    .modal-body {
+        @apply flex flex-col gap-3;
+    }
+
+    .modal-body p {
+        @apply text-sm text-neutral-400;
+    }
+
+    .progress-bar-container {
+        @apply w-full bg-neutral-900 rounded-md h-6 overflow-hidden border border-white/10;
+    }
+
+    .progress-bar-fill {
+        @apply h-full flex items-center justify-center text-xs font-bold text-black;
+        width: 0%;
+        background: white;
+        transition: width 0.2s ease;
+    }
+
+    .modal-footer {
+        @apply flex justify-end gap-2.5;
+    }
+
+    /* --- Loading Placeholder --- */
+    .loading-placeholder {
+        @apply animate-pulse opacity-50;
+    }
+
+    /* --- Project Dashboard Overlay --- */
+    .project-dashboard-overlay {
+        @apply fixed inset-0 bg-black/90 z-[150] flex items-center justify-center
+               opacity-0 pointer-events-none transition-all duration-300 backdrop-blur-md;
+    }
+
+    .project-dashboard-overlay.active {
+        @apply opacity-100 pointer-events-auto;
+    }
+
+    .project-dashboard {
+        @apply bg-neutral-950/80 border border-white/10 rounded-2xl w-[920px] max-w-[95%] h-[560px] max-h-[90%]
+               flex overflow-hidden;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+    }
+
+    .project-create-pane {
+        @apply w-80 border-r border-white/10 p-8 flex flex-col justify-between bg-black/20 flex-shrink-0;
+    }
+
+    .project-list-pane {
+        @apply flex-1 p-8 flex flex-col min-h-0;
+    }
+
+    .project-list {
+        @apply flex-1 overflow-y-auto pr-1 flex flex-col gap-3;
+    }
+
+    .project-card {
+        @apply bg-neutral-900/40 border border-white/5 rounded-xl p-4 flex items-center justify-between
+               cursor-pointer transition-all duration-200 select-none hover:bg-neutral-900/80 hover:border-white/20;
+    }
+
+    .project-card-info {
+        @apply flex-1 min-w-0;
+    }
+
+    .project-card-title {
+        @apply text-xs font-semibold text-white truncate mb-1;
+    }
+
+    .project-card-meta {
+        @apply flex items-center gap-3 text-[0.65rem] text-neutral-500 font-mono;
+    }
+
+    .project-card-meta span {
+        @apply flex items-center gap-1;
+    }
+
+    .project-card-action {
+        @apply w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-neutral-400
+               transition-all duration-200 hover:bg-white hover:text-black;
+    }
+
+    .project-card:hover .project-card-action {
+        @apply bg-white text-black scale-105;
+    }
+
+    .empty-projects-state {
+        @apply flex flex-col items-center justify-center py-20 text-neutral-600;
+    }
+
+    /* --- Clip Transform Overlay Box --- */
+    #clip-transform-box {
+        @apply absolute border border-white/80 pointer-events-auto cursor-move z-30 select-none;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .transform-anchor {
+        @apply w-12 h-12 bg-white border-2 border-black rounded-full absolute -translate-x-1/2 -translate-y-1/2 pointer-events-auto;
+        box-shadow: 0 1.5px 4px rgba(0,0,0,0.4);
+    }
+
+    .transform-anchor:hover {
+        @apply scale-110 bg-neutral-100;
+    }
+
+    .transform-anchor.top-left { top: 0; left: 0; }
+    .transform-anchor.top-right { top: 0; left: 100%; }
+    .transform-anchor.bottom-left { top: 100%; left: 0; }
+    .transform-anchor.bottom-right { top: 100%; left: 100%; }
+
+    .rotate-handle-line {
+        @apply w-px bg-white/80 absolute left-1/2 -translate-x-1/2 pointer-events-none;
+        top: -64px;
+        height: 64px;
+    }
+
+    .rotate-handle {
+        @apply w-12 h-12 bg-white border-2 border-black rounded-full absolute left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto cursor-grab;
+        top: -64px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .rotate-handle:active {
+        @apply cursor-grabbing;
+    }
+
+}
+

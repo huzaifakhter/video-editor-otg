@@ -1,0 +1,206 @@
+{
+    "aspectRatio": "9:16",
+    "clips": [
+        {
+            "id": "clip_iid2w425f",
+            "type": "audio",
+            "name": "Earcon - Martin Ljungdahl (192k).mp3",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\test-project_1781878219\\uploads\\20a337df-5784-4b4d-88ad-57ae068715f3.mp3",
+            "url": "/projects/test-project_1781878219/uploads/20a337df-5784-4b4d-88ad-57ae068715f3.mp3",
+            "trackId": "audio-1",
+            "start": 0,
+            "end": 8.637823,
+            "clipStart": 0,
+            "clipEnd": 8.637823,
+            "sourceDuration": 8.637823,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            }
+        },
+        {
+            "id": "clip_9sy9tq2i5",
+            "type": "image",
+            "name": "Splash-Screens-01-Thumbnail-Medium.jpg",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\test-project_1781878219\\uploads\\6154bb6a-f0f1-4aaf-96ce-1c060d77062f.jpg",
+            "url": "/projects/test-project_1781878219/uploads/6154bb6a-f0f1-4aaf-96ce-1c060d77062f.jpg",
+            "trackId": "image-1",
+            "start": 0,
+            "end": 2.237822999999999,
+            "clipStart": 0,
+            "clipEnd": 2.237822999999999,
+            "sourceDuration": 9999,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "x": -163,
+            "y": 25,
+            "width": 1773,
+            "height": 1330,
+            "rotation": 0,
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 675,
+                "is_image": true,
+                "width": 900
+            }
+        },
+        {
+            "id": "clip_9l5xfsihc",
+            "type": "image",
+            "name": "original-888696afe6a4361b31616eb9f35514cc.png",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\test-project_1781878219\\uploads\\23a25a8b-fc66-4d4c-a437-da7eae034500.png",
+            "url": "/projects/test-project_1781878219/uploads/23a25a8b-fc66-4d4c-a437-da7eae034500.png",
+            "trackId": "image-1",
+            "start": 2.237822999999999,
+            "end": 4.229999961853028,
+            "clipStart": 0,
+            "clipEnd": 1.992176961853029,
+            "sourceDuration": 9999,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "x": -107,
+            "y": -31,
+            "width": 1810,
+            "height": 1358,
+            "rotation": 0,
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1536,
+                "is_image": true,
+                "width": 2048
+            }
+        },
+        {
+            "id": "clip_v1nctq2st",
+            "type": "image",
+            "name": "missartem-bicycle-7540835_1920.png",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\test-project_1781878219\\uploads\\95be2b85-5fc6-48e9-9910-964f5288c96a.png",
+            "url": "/projects/test-project_1781878219/uploads/95be2b85-5fc6-48e9-9910-964f5288c96a.png",
+            "trackId": "image-1",
+            "start": 4.229999961853028,
+            "end": 6.871523484461445,
+            "clipStart": 0,
+            "clipEnd": 2.6415235226084173,
+            "sourceDuration": 9999,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "x": -68,
+            "y": -37,
+            "width": 1261,
+            "height": 1328,
+            "rotation": 0,
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1920,
+                "is_image": true,
+                "width": 1825
+            }
+        },
+        {
+            "id": "clip_290eq0f0c",
+            "type": "image",
+            "name": "7dcb27ec-ccc5-4b22-aa59-a4aee7335ba2.png",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\test-project_1781878219\\uploads\\5650e7e0-f1e3-46d1-8b3c-63ecf6ee1e25.png",
+            "url": "/projects/test-project_1781878219/uploads/5650e7e0-f1e3-46d1-8b3c-63ecf6ee1e25.png",
+            "trackId": "image-1",
+            "start": 6.871523484461445,
+            "end": 8.637823,
+            "clipStart": 0.14117647058823568,
+            "clipEnd": 1.9074759861267898,
+            "sourceDuration": 9999,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "x": -97,
+            "y": -43,
+            "width": 1281,
+            "height": 1921,
+            "rotation": 0,
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1536,
+                "is_image": true,
+                "width": 1024
+            }
+        }
+    ],
+    "duration": 10,
+    "name": "test project",
+    "tracks": [
+        {
+            "icon": "fa-t",
+            "id": "text-1",
+            "type": "text"
+        },
+        {
+            "icon": "fa-image",
+            "id": "image-1",
+            "type": "image"
+        },
+        {
+            "icon": "fa-video",
+            "id": "video-1",
+            "type": "video"
+        },
+        {
+            "icon": "fa-volume-high",
+            "id": "audio-1",
+            "type": "audio"
+        }
+    ]
+}

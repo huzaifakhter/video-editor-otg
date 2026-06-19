@@ -1,0 +1,47 @@
+[2026-06-19 19:40:19] Project Created: 'test project' with aspect ratio 16:9
+[2026-06-19 19:40:28] Action: Import file - Name: 'Earcon - Martin Ljungdahl (192k).mp3', Filepath: 'C:\Projects\video-editor-otg\engine\projects\test-project_1781878219\uploads\20a337df-5784-4b4d-88ad-57ae068715f3.mp3'
+[2026-06-19 19:40:28] Action: Import file - Name: 'Splash-Screens-01-Thumbnail-Medium.jpg', Filepath: 'C:\Projects\video-editor-otg\engine\projects\test-project_1781878219\uploads\6154bb6a-f0f1-4aaf-96ce-1c060d77062f.jpg'
+[2026-06-19 19:40:49] Action: Add clip: Earcon - Martin Ljungdahl (192k).mp3
+[2026-06-19 19:40:49] Action: Add clip: Splash-Screens-01-Thumbnail-Medium.jpg
+[2026-06-19 19:40:52] Action: Move/Trim clip
+[2026-06-19 19:40:58] Action: Move/Trim clip
+[2026-06-19 19:41:08] Action: Import file - Name: 'original-888696afe6a4361b31616eb9f35514cc.png', Filepath: 'C:\Projects\video-editor-otg\engine\projects\test-project_1781878219\uploads\23a25a8b-fc66-4d4c-a437-da7eae034500.png'
+[2026-06-19 19:41:08] Action: Import file - Name: 'missartem-bicycle-7540835_1920.png', Filepath: 'C:\Projects\video-editor-otg\engine\projects\test-project_1781878219\uploads\95be2b85-5fc6-48e9-9910-964f5288c96a.png'
+[2026-06-19 19:41:09] Action: Add clip: original-888696afe6a4361b31616eb9f35514cc.png
+[2026-06-19 19:41:10] Action: Add clip: missartem-bicycle-7540835_1920.png
+[2026-06-19 19:41:11] Action: Move/Trim clip
+[2026-06-19 19:41:13] Action: Move/Trim clip
+[2026-06-19 19:41:38] Action: Move/Trim clip
+[2026-06-19 19:41:42] Action: Move/Trim clip
+[2026-06-19 19:41:45] Action: Move/Trim clip
+[2026-06-19 19:41:47] Action: Move/Trim clip
+[2026-06-19 19:41:54] Action: Move/Trim clip
+[2026-06-19 19:41:57] Action: Move/Trim clip
+[2026-06-19 19:42:08] Action: Import file - Name: '7dcb27ec-ccc5-4b22-aa59-a4aee7335ba2.png', Filepath: 'C:\Projects\video-editor-otg\engine\projects\test-project_1781878219\uploads\5650e7e0-f1e3-46d1-8b3c-63ecf6ee1e25.png'
+[2026-06-19 19:42:10] Action: Add clip: 7dcb27ec-ccc5-4b22-aa59-a4aee7335ba2.png
+[2026-06-19 19:42:12] Action: Move/Trim clip
+[2026-06-19 19:42:17] Action: Move/Trim clip
+[2026-06-19 19:42:19] Action: Move/Trim clip
+[2026-06-19 19:42:20] Action: Move/Trim clip
+[2026-06-19 19:42:22] Action: Move/Trim clip
+[2026-06-19 19:42:23] Action: Move/Trim clip
+[2026-06-19 19:42:23] Action: Move/Trim clip
+[2026-06-19 19:42:25] Action: Move/Trim clip
+[2026-06-19 19:42:25] Action: Move/Trim clip
+[2026-06-19 19:42:27] Action: Move/Trim clip
+[2026-06-19 19:42:27] Action: Move/Trim clip
+[2026-06-19 19:42:28] Action: Move/Trim clip
+[2026-06-19 19:42:31] Action: Move/Trim clip
+[2026-06-19 19:42:46] Action: Transform clip
+[2026-06-19 19:42:48] Action: Transform clip
+[2026-06-19 19:42:49] Action: Move/Trim clip
+[2026-06-19 19:42:52] Action: Transform clip
+[2026-06-19 19:42:55] Action: Transform clip
+[2026-06-19 19:42:56] Action: Move/Trim clip
+[2026-06-19 19:42:59] Action: Transform clip
+[2026-06-19 19:43:01] Action: Transform clip
+[2026-06-19 19:43:01] Action: Move/Trim clip
+[2026-06-19 19:43:04] Action: Transform clip
+[2026-06-19 19:43:06] Action: Transform clip
+[2026-06-19 19:43:27] Action: Start Render - Render ID: bedfe333-1a7f-4a6f-b389-8aea43fcbcea
+[2026-06-19 19:43:34] Action: Render Complete - Output: 'render_832723f1-776e-4103-90e8-d0c8eddee2ab.mp4'

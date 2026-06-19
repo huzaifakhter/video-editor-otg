@@ -1,0 +1,105 @@
+{
+    "aspectRatio": "9:16",
+    "clips": [
+        {
+            "id": "clip_cf715oisi",
+            "type": "video",
+            "name": "Pura_intenci\u00f3n.mp4",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\third-project_1781876909\\uploads\\d40f2b97-5525-4bce-afa4-b153e7e3844d.mp4",
+            "url": "/projects/third-project_1781876909/uploads/d40f2b97-5525-4bce-afa4-b153e7e3844d.mp4",
+            "trackId": "video-1",
+            "start": 0,
+            "end": 66.034333,
+            "clipStart": 0,
+            "clipEnd": 66.034333,
+            "sourceDuration": 180.034333,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "x": -18,
+            "y": 304,
+            "width": 720,
+            "height": 720,
+            "rotation": 0,
+            "metadata": {
+                "duration": 180.034333,
+                "has_audio": true,
+                "has_video": true,
+                "height": 1024,
+                "is_image": false,
+                "width": 1024
+            }
+        },
+        {
+            "id": "clip_j3qpz32hg",
+            "type": "image",
+            "name": "Gemini_Generated_Image_p4lf0yp4lf0yp4lf (1).png",
+            "filepath": "C:\\Projects\\video-editor-otg\\engine\\projects\\third-project_1781876909\\uploads\\75143346-6b76-4474-a11f-3ed015f62b81.png",
+            "url": "/projects/third-project_1781876909/uploads/75143346-6b76-4474-a11f-3ed015f62b81.png",
+            "trackId": "image-1",
+            "start": 0,
+            "end": 66.034333,
+            "clipStart": 0,
+            "clipEnd": 66.034333,
+            "sourceDuration": 9999,
+            "volume": 1,
+            "speed": 1,
+            "effects": {
+                "grayscale": false,
+                "sepia": false,
+                "brightness": 1,
+                "contrast": 1
+            },
+            "transitions": {
+                "fadeIn": 0,
+                "fadeOut": 0
+            },
+            "x": -814,
+            "y": -10,
+            "width": 2348,
+            "height": 1310,
+            "rotation": 0,
+            "metadata": {
+                "duration": 0,
+                "has_audio": false,
+                "has_video": false,
+                "height": 1536,
+                "is_image": true,
+                "width": 2752
+            }
+        }
+    ],
+    "duration": 66.034333,
+    "name": "Third Project",
+    "tracks": [
+        {
+            "icon": "fa-t",
+            "id": "text-1",
+            "type": "text"
+        },
+        {
+            "icon": "fa-image",
+            "id": "image-1",
+            "type": "image"
+        },
+        {
+            "icon": "fa-video",
+            "id": "video-1",
+            "type": "video"
+        },
+        {
+            "icon": "fa-volume-high",
+            "id": "audio-1",
+            "type": "audio"
+        }
+    ]
+}
